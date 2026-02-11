@@ -1,0 +1,116 @@
+@import url("style.css");
+
+/* 
+    THEME: ECO ORGANIC
+    Target Audience: Healthy Lifestyle, Hipsters, Conscious Consumption
+*/
+
+:root {
+    --color-primary: #556B2F; /* Dark Olive Green */
+    --color-primary-dark: #3a4b1f;
+    --color-bg-light: #F5F5DC; /* Beige/Cream */
+    --color-bg-paper: #FAF0E6; /* Linen */
+    
+    /* Overrides */
+    --color-text-heading: #2F4F4F; /* Dark Slate Gray */
+    --color-text: #4a4a4a;
+    --color-white: #ffffff;
+    
+    --radius-lg: 30px; /* Softer corners */
+    --font-family: 'Helvetica Neue', 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--color-bg-light);
+    color: var(--color-text);
+    font-family: var(--font-family);
+    /* Subtle paper texture */
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3, h4, .hero__title, .header__logo {
+    color: var(--color-text-heading);
+    font-weight: 600;
+}
+
+/* Header */
+.header {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    box-shadow: 0 5px 15px rgba(85, 107, 47, 0.1);
+}
+
+/* Accents */
+.text-accent {
+    color: #8B4513; /* Saddle Brown */
+}
+.text-accent::after {
+    background: #DEB887;
+    height: 50%;
+    bottom: 5px;
+    opacity: 0.4;
+    border-radius: 4px;
+}
+
+.text-gradient {
+    background: none;
+    -webkit-text-fill-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 50px !important;
+}
+
+.btn--primary {
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    box-shadow: 0 10px 20px rgba(85, 107, 47, 0.3);
+}
+
+.btn--primary:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 25px rgba(85, 107, 47, 0.4);
+}
+
+/* Cards */
+.advantage-card, .product-card, .step-item, .review-card {
+    background: #fff;
+    border: none;
+    box-shadow: 0 10px 30px rgba(85, 107, 47, 0.08); /* Greenish shadow */
+    border-radius: var(--radius-lg);
+}
+
+.advantage-card:hover { 
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(85, 107, 47, 0.15);
+}
+
+.advantage-card__emoji {
+    filter: sepia(0.5); /* Warmer emojis */
+}
+
+/* Hero Section */
+.hero__bg::before {
+    background: radial-gradient(circle, rgba(85, 107, 47, 0.2) 0%, transparent 70%);
+}
+.hero__visual-circle {
+    background: #d4e157; /* Limeish */
+    opacity: 0.2;
+    filter: blur(80px);
+}
+
+/* Badges */
+.badge--new {
+    background: #8FBC8F; /* Dark Sea Green */
+}
+
+/* Footer */
+.footer {
+    background: #F0E68C; /* Khaki */
+    color: #5d4037;
+}
+
