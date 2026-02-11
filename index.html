@@ -21,10 +21,8 @@
     <meta property="og:image" content="assets/images/og-image.jpg">
 
     <!-- Preload Critical Resources -->
-    <link rel="preload" as="image" href="https://v12coffee.com.ua/img/product/18/x694697e6c1a7f_original.webp.pagespeed.ic.Sspt8oHvmV.webp" fetchpriority="high">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="assets/images/hero_machine_final.webp" fetchpriority="high">
+    <!-- Fonts loaded locally in style.css -->
 
     <!-- Critical CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -198,7 +196,7 @@
                 <div class="hero__image-wrapper" data-aos="zoom-in" data-aos-duration="1000">
                     <!-- Placeholder for Hero Image (coffee machine) -->
                     <div class="hero__visual-circle"></div>
-                    <img src="https://v12coffee.com.ua/img/product/18/x694697e6c1a7f_original.webp.pagespeed.ic.Sspt8oHvmV.webp" alt="Сучасна кав'ярня самообслуговування" class="hero__img" width="400" height="600" fetchpriority="high">
+                    <img src="assets/images/hero_machine_final.webp" alt="Сучасна кав'ярня самообслуговування" class="hero__img" width="800" height="800" fetchpriority="high">
                 </div>
             </div>
         </section>
@@ -875,7 +873,7 @@
                                     </div>
                                     <p class="review-quote">“Співпраця з компанією V12 нам подобається. Все чітко та прозоро.”</p>
                                     <div class="review-author">
-                                        <h4>Максим</h4>
+                                        <h3>Максим</h3>
                                         <span>Партнер з Харкова</span>
                                     </div>
                                 </div>
@@ -902,7 +900,7 @@
                                     </div>
                                     <p class="review-quote">“Сподобалось, що з першого дня вже можна заробляти. Бізнес під ключ.”</p>
                                     <div class="review-author">
-                                        <h4>Сергій</h4>
+                                        <h3>Сергій</h3>
                                         <span>Партнер з Києва</span>
                                     </div>
                                 </div>
@@ -929,7 +927,7 @@
                                     </div>
                                     <p class="review-quote">“Ідеальний варіант для пасивного доходу. Мінімум часу, максимум віддачі.”</p>
                                     <div class="review-author">
-                                        <h4>Олена</h4>
+                                        <h3>Олена</h3>
                                         <span>Партнер з Одеси</span>
                                     </div>
                                 </div>
@@ -956,7 +954,7 @@
                                     </div>
                                     <p class="review-quote">“Масштабувати цей бізнес дуже легко. Команда V12 завжди на зв'язку.”</p>
                                     <div class="review-author">
-                                        <h4>Андрій</h4>
+                                        <h3>Андрій</h3>
                                         <span>Партнер зі Львова</span>
                                     </div>
                                 </div>
@@ -1066,7 +1064,7 @@
                     </div>
 
                     <div class="map-box__visual">
-                        <img src="assets/images/map-ukraine.svg" alt="Карта України" class="map-svg" loading="lazy">
+                        <img src="assets/images/map-ukraine.svg" alt="Карта України" class="map-svg" loading="lazy" width="880" height="590">
                         
                         <!-- Pulse Hotspots -->
                         <div class="hotspot" style="top: 25%; left: 48%;"></div> <!-- Kyiv -->
@@ -1320,7 +1318,8 @@
 
                             <div class="input-group">
                                 <div class="input-icon">📍</div>
-                                <select class="premium-input">
+                                <label for="region-select" class="visually-hidden">Оберіть регіон</label>
+                                <select id="region-select" class="premium-input">
                                     <option value="" disabled selected>Оберіть регіон</option>
                                     <option value="kyiv">Київ</option>
                                     <option value="lviv">Львів</option>

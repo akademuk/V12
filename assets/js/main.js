@@ -15,11 +15,24 @@ document.addEventListener("DOMContentLoaded", function() {
     // OPTIMIZATION: Sync Lenis with GSAP ScrollTrigger to fix lag/jitter
     lenis.on('scroll', ScrollTrigger.update);
 
+    // Header Blur on Scroll (Optimized: Hook into Lenis instead of native scroll)
+    const header = document.querySelector('.header');
+    lenis.on('scroll', ({ scroll }) => {
+        if (scroll > 20) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
     gsap.ticker.add((time) => {
         lenis.raf(time * 1000); // GSAP sends seconds, Lenis needs ms
     });
 
     gsap.ticker.lagSmoothing(0); // Critical for smooth pinning
+
+    // OPTIMIZATION: Prevent heavy layout thrashing on mobile resizing
+    ScrollTrigger.config({ ignoreMobileResize: true });
 
     // 2. Initialize AOS (Animate on Scroll)
     AOS.init({
@@ -83,18 +96,26 @@ document.addEventListener("DOMContentLoaded", function() {
         cafesValEl.innerText = cafes;
         monthsValEl.innerText = months;
 
-        // Update Slider Backgrounds (Progress Fill)
-        const updateSliderBg = (el) => {
+        // Calculate Percentages (READ PHASE)
+        const getPercent = (el) => {
             const min = parseInt(el.min) || 0;
             const max = parseInt(el.max) || 100;
             const val = parseInt(el.value) || 0;
-            const percent = ((val - min) / (max - min)) * 100;
-            el.style.background = `linear-gradient(to right, #4fdad5 0%, #4fdad5 ${percent}%, #e2e8f0 ${percent}%, #e2e8f0 100%)`;
-        };
+            return ((val - min) / (max - min)) * 100;
+        }
 
-        updateSliderBg(cupsEl);
-        updateSliderBg(cafesEl);
-        updateSliderBg(monthsEl);
+        const cupsPercent = getPercent(cupsEl);
+        const cafesPercent = getPercent(cafesEl);
+        const monthsPercent = getPercent(monthsEl);
+
+        // Update Slider Backgrounds (WRITE PHASE)
+        const setBg = (el, percent) => {
+            el.style.background = `linear-gradient(to right, #4fdad5 0%, #4fdad5 ${percent}%, #e2e8f0 ${percent}%, #e2e8f0 100%)`;
+        }
+
+        setBg(cupsEl, cupsPercent);
+        setBg(cafesEl, cafesPercent);
+        setBg(monthsEl, monthsPercent);
 
         // Formula derived from user data:
         // Profit per cup ≈ 24 UAH
@@ -168,18 +189,19 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Header Blur on Scroll (Refined for CSS classes)
-    const header = document.querySelector('.header');
+    // Removed native scroll listener in favor of Lenis hook above
+    // const header = document.querySelector('.header'); // Already defined
     
-    function handleScroll() {
-        if (window.scrollY > 20) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    }
+    // function handleScroll() {
+    //     if (window.scrollY > 20) {
+    //         header.classList.add('scrolled');
+    //     } else {
+    //         header.classList.remove('scrolled');
+    //     }
+    // }
     
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check on init
+    // window.addEventListener('scroll', handleScroll);
+    // handleScroll(); // Check on init
 
     // 6. Mobile Menu
     const burger = document.querySelector('.header__burger');
