@@ -22,16 +22,1226 @@
 
     <!-- Preload Critical Resources -->
     <link rel="preload" as="image" href="assets/images/hero_machine_final.webp" fetchpriority="high">
+
+    <!-- PDF -->
+    <link rel="preload" href="assets/fonts/nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgFE_.woff2" as="font" type="font/woff2"
+        crossorigin>
+    <link rel="preload" href="assets/fonts/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2" as="font" type="font/woff2"
+        crossorigin>
+    <link rel="preload" href="assets/fonts/xn7gYHE41ni1AdIRggOxSuXd.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font" type="font/woff2" crossorigin>
+
     <!-- Fonts loaded locally in style.css -->
 
-    <!-- Critical CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* cyrillic-ext */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggqxSuXd.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggOxSuXd.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* greek */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2) format('woff2');
+            unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+        }
+
+        /* vietnamese */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* cyrillic-ext */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggqxSuXd.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggOxSuXd.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* greek */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2) format('woff2');
+            unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+        }
+
+        /* vietnamese */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* cyrillic-ext */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggqxSuXd.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggOxSuXd.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* greek */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2) format('woff2');
+            unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+        }
+
+        /* vietnamese */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* cyrillic-ext */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggqxSuXd.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggOxSuXd.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* greek */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2) format('woff2');
+            unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+        }
+
+        /* vietnamese */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap;
+            src: url(assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url(assets/fonts/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTXtXA-W2r.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* vietnamese */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url(assets/fonts/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTXt7A-W2r.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url(assets/fonts/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTXt_A-W2r.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url(assets/fonts/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTXtHA-Q.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(assets/fonts/nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgFE_.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* vietnamese */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(assets/fonts/nuFiD-vYSZviVYUb_rj3ij__anPXDTPYgFE_.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(assets/fonts/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(assets/fonts/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url(assets/fonts/nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgFE_.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* vietnamese */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url(assets/fonts/nuFiD-vYSZviVYUb_rj3ij__anPXDTPYgFE_.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url(assets/fonts/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url(assets/fonts/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(assets/fonts/nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgFE_.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* vietnamese */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(assets/fonts/nuFiD-vYSZviVYUb_rj3ij__anPXDTPYgFE_.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(assets/fonts/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(assets/fonts/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* Reset & Base */
+        :root {
+            --color-primary: #0ABAB5;
+            /* Tiffany Blue */
+            --color-primary-dark: #008f8a;
+            --color-primary-light: #E0F5F4;
+
+            --color-dark: #FFFFFF;
+            /* Reversing: Main BG is White */
+            --color-dark-200: #F8F9FA;
+            /* Secondary BG is Light Gray */
+            --color-dark-300: #E9ECEF;
+
+            --color-text: #2C2C2C;
+            /* Dark text */
+            --color-text-heading: #111111;
+            --color-text-muted: #666666;
+            --color-white: #FFFFFF;
+
+            --container-width: 1240px;
+            --container-padding: 20px;
+            --header-height: 90px;
+
+            --transition-fast: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --radius-md: 8px;
+            --radius-lg: 20px;
+
+            /* Clean Luxury Shadows */
+            --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.02);
+            --shadow-glow: 0 10px 40px rgba(10, 186, 181, 0.25);
+            --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.04);
+            --shadow-hover: 0 30px 60px rgba(10, 186, 181, 0.15);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html.lenis {
+            height: auto;
+        }
+
+        .lenis.lenis-smooth {
+            scroll-behavior: auto;
+        }
+
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+
+        .lenis.lenis-scrolling iframe {
+            pointer-events: none;
+        }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: var(--color-dark);
+            color: var(--color-text);
+            line-height: 1.6;
+            width: 100%;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography Enhancements */
+        h1,
+        h2,
+        h3,
+        h4,
+        .hero__title,
+        .section__title,
+        .header__logo {
+            font-family: 'Playfair Display', serif;
+            /* Luxury Serif */
+            color: var(--color-text-heading);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-fast);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        /* Typography Utility */
+        .text-accent {
+            color: var(--color-primary);
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Underline effect for accents */
+        .text-accent::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background-color: var(--color-primary);
+            opacity: 0.2;
+            z-index: -1;
+            transform: skewX(-10deg);
+        }
+
+        .text-gradient {
+            color: var(--color-primary);
+            /* Fallback */
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-white {
+            color: var(--color-white);
+        }
+
+        .text-white-50 {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Buttons - Tiffany style */
+        .btn {
+            display: inline-block;
+            padding: 16px 36px;
+            border-radius: 0;
+            /* Boxy luxury style */
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            border: 1px solid transparent;
+            transition: all 0.4s ease;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .btn--small {
+            padding: 12px 28px;
+            font-size: 0.8rem;
+        }
+
+        .btn--primary {
+            background-color: var(--color-text-heading);
+            /* Black */
+            color: var(--color-white);
+            border-color: var(--color-text-heading);
+        }
+
+        .btn--primary:hover {
+            background-color: var(--color-primary);
+            border-color: var(--color-primary);
+            color: var(--color-white);
+            box-shadow: var(--shadow-glow);
+            transform: translateY(-2px);
+        }
+
+        .btn--glow {
+            /* Subtle shadow */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn--outline {
+            border-color: var(--color-text-heading);
+            color: var(--color-text-heading);
+            background: transparent;
+        }
+
+        .btn--outline:hover {
+            background: var(--color-text-heading);
+            color: var(--color-white);
+        }
+
+        .btn--full {
+            width: 100%;
+        }
+
+        /* Hero Content Enhancements */
+        .hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            border: 1px solid rgba(10, 186, 181, 0.3);
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--color-text-heading);
+            margin-bottom: 24px;
+            box-shadow: 0 4px 15px rgba(10, 186, 181, 0.15);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .pulse-dot::after {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            width: 16px;
+            height: 16px;
+            background: inherit;
+            border-radius: 50%;
+            opacity: 0.4;
+            animation: dot-pulse 2s infinite;
+        }
+
+        @keyframes dot-pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.4;
+            }
+
+            100% {
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        .hero__features {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .hero__feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            /* iOS Glass Style */
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 10px 16px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+            width: auto;
+            transition: all 0.3s ease;
+
+            /* Initial state for Custom JS/CSS Animation */
+            opacity: 0;
+            transform: perspective(1000px) rotateY(90deg) translateY(20px);
+            animation: feature-flip-reveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        @keyframes feature-flip-reveal {
+            0% {
+                opacity: 0;
+                transform: perspective(1000px) rotateY(90deg) translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: perspective(1000px) rotateY(0deg) translateY(0);
+            }
+        }
+
+        /* Staggered Delay for Sequential Reveal */
+        .hero__feature-item:nth-child(1) {
+            animation-delay: 0.3s;
+        }
+
+        .hero__feature-item:nth-child(2) {
+            animation-delay: 0.6s;
+        }
+
+        .hero__feature-item:nth-child(3) {
+            animation-delay: 0.9s;
+        }
+
+        .hero__feature-item:hover {
+            transform: translateY(-5px) !important;
+            /* Override animation transform state on hover */
+            background: rgba(255, 255, 255, 0.45);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .glass-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            color: var(--color-primary);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .glass-icon svg {
+            stroke-width: 2px;
+        }
+
+        .feature-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .feature-text strong {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--color-text-heading);
+        }
+
+        .feature-text span {
+            font-size: 0.75rem;
+            color: var(--color-text-muted);
+            font-weight: 500;
+        }
+
+        /* Button with Icon */
+        .btn--icon {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        /* Video Button */
+        .btn--video {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 24px;
+            font-weight: 600;
+            color: var(--color-text-heading);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .play-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--color-white);
+            border: 1px solid #eee;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+
+        .btn--video:hover .play-icon {
+            background: var(--color-primary);
+            color: var(--color-white);
+            transform: scale(1.1);
+        }
+
+        .btn--video:hover {
+            color: var(--color-primary);
+        }
+
+        /* Header - Modern & Neat (Glassmorphism + Floating feel) */
+        .header {
+            position: fixed;
+            top: 20px;
+            /* Floating effect */
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: var(--container-width);
+            z-index: 100;
+            height: 70px;
+            /* Compact */
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            /* Pill shape */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+            display: flex;
+            align-items: center;
+            transition: all 0.4s ease;
+            padding: 0 30px;
+        }
+
+        .header.scrolled {
+            top: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .header__container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header__logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--color-text-heading);
+            letter-spacing: -0.02em;
+            font-style: normal;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .header__logo span {
+            color: var(--color-primary);
+        }
+
+        .header__nav {
+            display: none;
+        }
+
+        @media (min-width: 992px) {
+            .header__nav {
+                display: block;
+            }
+        }
+
+        .header__list {
+            display: flex;
+            gap: 32px;
+        }
+
+        .header__link {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--color-text);
+            text-transform: capitalize;
+            /* Nicer than uppercase */
+            letter-spacing: 0.2px;
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .header__link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-primary);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .header__link:hover {
+            color: var(--color-text-heading);
+        }
+
+        .header__link:hover::after {
+            width: 100%;
+        }
+
+        .header__actions {
+            display: none;
+            align-items: center;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .header__actions {
+                display: flex;
+            }
+        }
+
+        .header__phone {
+            font-weight: 700;
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .header__btn {
+            padding: 10px 24px;
+            border-radius: 30px;
+            /* Match header pills */
+            font-size: 0.85rem;
+        }
+
+        .header__burger span {
+            background-color: var(--color-text-heading);
+            /* Black burger */
+            display: block;
+            width: 24px;
+            height: 2px;
+            margin-bottom: 6px;
+        }
+
+        .header__burger {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        @media (min-width: 992px) {
+            .header__burger {
+                display: none;
+            }
+        }
+
+        /* Hero Section - Clean, High-Key */
+        .hero {
+            position: relative;
+            padding-top: calc(var(--header-height) + 60px);
+            padding-bottom: 100px;
+            min-height: 800px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Abstract decorations - Hero Blur Effect */
+        .hero__bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .hero__bg::before,
+        .hero__bg::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            /* Heavy blur for dreamy effect */
+            opacity: 0.6;
+            animation: float-blob 20s infinite ease-in-out alternate;
+        }
+
+        .hero__bg::before {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(10, 186, 181, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
+            top: -100px;
+            right: -100px;
+        }
+
+        .hero__bg::after {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(10, 186, 181, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+            bottom: -50px;
+            left: -100px;
+            animation-delay: -5s;
+            animation-duration: 25s;
+        }
+
+        @keyframes float-blob {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, 50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.95);
+            }
+
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+        }
+
+        .hero__title {
+            font-size: clamp(3rem, 6vw, 5rem);
+            line-height: 1.05;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--color-text-heading);
+            overflow-wrap: break-word;
+            /* Ensure long words don't overflow */
+            hyphens: manual;
+        }
+
+        .hero__subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-muted);
+            margin-bottom: 40px;
+            border-left: 3px solid var(--color-primary);
+            padding-left: 20px;
+        }
+
+        .hero__container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero__content {
+            min-width: 0;
+            /* Prevents long words from breaking grid layout */
+        }
+
+        @media (min-width: 992px) {
+            .hero__container {
+                grid-template-columns: 1.2fr 0.8fr;
+            }
+        }
+
+        .hero__buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 60px;
+        }
+
+        .hero__stats {
+            display: flex;
+            gap: 40px;
+        }
+
+        .stat-item__number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            line-height: 1;
+        }
+
+        .stat-item__text {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+        }
+
+        /* Hero Image & 3D Animation */
+        .hero__image-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1200px;
+            /* Enable 3D space */
+        }
+
+        .hero__visual-circle {
+            position: absolute;
+            width: 650px;
+            height: 650px;
+            background: radial-gradient(circle, rgba(10, 186, 181, 0.4) 0%, rgba(10, 186, 181, 0.1) 60%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(100px);
+            /* REQUESTED: STRONGER BLUR */
+            opacity: 0.8;
+            animation: bio-pulse 6s infinite alternate;
+        }
+
+        @keyframes bio-pulse {
+            0% {
+                transform: scale(0.9);
+                opacity: 0.6;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+                filter: blur(120px);
+            }
+
+            100% {
+                transform: scale(0.95);
+                opacity: 0.7;
+            }
+        }
+
+        .hero__img {
+            max-height: 800px;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.2));
+            position: relative;
+            z-index: 10;
+            /* 3D Floating Animation */
+            transform-origin: center center;
+            animation: float-3d 10s ease-in-out infinite;
+            will-change: transform;
+            border-radius: var(--radius-lg);
+        }
+
+        /* Header Socials */
+        .header__socials {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-right: 20px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(10, 186, 181, 0.1);
+            color: var(--color-primary);
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(10, 186, 181, 0.3);
+        }
+
+        .social-link svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        @media (max-width: 1200px) {
+            .header__socials {
+                display: none;
+                /* Hide on smaller screens or move to burger menu */
+            }
+        }
+
+        /* Simulates looking at the object from different slight angles */
+        @keyframes float-3d {
+            0% {
+                transform: translateY(0) rotateY(-12deg) rotateX(2deg);
+            }
+
+            25% {
+                transform: translateY(-15px) rotateY(0deg) rotateX(4deg);
+            }
+
+            50% {
+                transform: translateY(0) rotateY(12deg) rotateX(2deg);
+            }
+
+            75% {
+                transform: translateY(15px) rotateY(0deg) rotateX(-2deg);
+            }
+
+            100% {
+                transform: translateY(0) rotateY(-12deg) rotateX(2deg);
+            }
+        }
+    </style>
+    <!-- Non-critical CSS loaded asynchronously -->
+    <link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </noscript>
 
     <!-- Deferred Styles -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print"
+        onload="this.media='all'" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" media="print" onload="this.media='all'" />
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+        media="print" onload="this.media='all'" />
+
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -127,7 +1337,7 @@
                     <div class="hero__badge" data-aos="fade-down">
                         <span class="pulse-dot"></span> Трендовий бізнес 2026
                     </div>
-                    <h1 class="hero__title" data-aos="fade-up" data-aos-delay="100">
+                    <h1 class="hero__title">
                         Кав'ярня <span class="text-gradient">само&shy;обслу&shy;гову&shy;вання</span><br>
                         Відкрий власний бізнес
                     </h1>
@@ -196,7 +1406,8 @@
                 <div class="hero__image-wrapper" data-aos="zoom-in" data-aos-duration="1000">
                     <!-- Placeholder for Hero Image (coffee machine) -->
                     <div class="hero__visual-circle"></div>
-                    <img src="assets/images/hero_machine_final.webp" alt="Сучасна кав'ярня самообслуговування" class="hero__img" width="800" height="800" fetchpriority="high">
+                    <img src="assets/images/hero_machine_final.webp" alt="Сучасна кав'ярня самообслуговування"
+                        class="hero__img" width="800" height="800" fetchpriority="high">
                 </div>
             </div>
         </section>
@@ -363,7 +1574,8 @@
                         <div class="swiper-slide catalog-item">
                             <article class="product-card">
                                 <div class="product-card__image">
-                                    <img src="https://v12coffee.com.ua/img/product/18/x694697e6c1a7f_original.webp.pagespeed.ic.Sspt8oHvmV.webp" alt="Jetinno JL24" loading="lazy" width="300" height="400">
+                                    <img src="https://v12coffee.com.ua/img/product/18/x694697e6c1a7f_original.webp.pagespeed.ic.Sspt8oHvmV.webp"
+                                        alt="Jetinno JL24" loading="lazy" width="300" height="400">
                                     <div class="badge badge--hot">Топ продажів</div>
                                 </div>
                                 <div class="product-card__info">
@@ -386,7 +1598,8 @@
                         <div class="swiper-slide catalog-item">
                             <article class="product-card" data-aos="fade-up" data-aos-delay="100">
                                 <div class="product-card__image">
-                                    <img src="https://v12coffee.com.ua/img/product/19/694dd041c19a9_original.webp.pagespeed.ce.wnRJwJv5bU.webp" alt="Снекомат V12" loading="lazy" width="300" height="400">
+                                    <img src="https://v12coffee.com.ua/img/product/19/694dd041c19a9_original.webp.pagespeed.ce.wnRJwJv5bU.webp"
+                                        alt="Снекомат V12" loading="lazy" width="300" height="400">
                                     <div class="badge badge--new">New</div>
                                 </div>
                                 <div class="product-card__info">
@@ -421,7 +1634,8 @@
                         <div class="swiper-slide catalog-item">
                             <article class="product-card" data-aos="fade-up" data-aos-delay="200">
                                 <div class="product-card__image">
-                                    <img src="https://v12coffee.com.ua/img/product/17/6925b5c345ae5_original.png.pagespeed.ce.TX_wvbi4-C.png" alt="Saeco Iperautomatica Street" loading="lazy" width="300" height="400">
+                                    <img src="https://v12coffee.com.ua/img/product/17/6925b5c345ae5_original.png.pagespeed.ce.TX_wvbi4-C.png"
+                                        alt="Saeco Iperautomatica Street" loading="lazy" width="300" height="400">
                                     <div class="badge badge--sale">Б/В</div>
                                 </div>
                                 <div class="product-card__info">
@@ -455,7 +1669,8 @@
                         <div class="swiper-slide catalog-item">
                             <article class="product-card" data-aos="fade-up" data-aos-delay="300">
                                 <div class="product-card__image">
-                                    <img src="https://v12coffee.com.ua/img/product/14/694434a70be42_original.webp.pagespeed.ce.TYUS9mTkKj.webp" alt="JL28 Indoor" loading="lazy" width="300" height="400">
+                                    <img src="https://v12coffee.com.ua/img/product/14/694434a70be42_original.webp.pagespeed.ce.TYUS9mTkKj.webp"
+                                        alt="JL28 Indoor" loading="lazy" width="300" height="400">
                                 </div>
                                 <div class="product-card__info">
                                     <h3 class="product-card__title">Внутрішня JL28</h3>
@@ -488,7 +1703,8 @@
                         <div class="swiper-slide catalog-item">
                             <article class="product-card" data-aos="fade-up" data-aos-delay="400">
                                 <div class="product-card__image">
-                                    <img src="https://v12coffee.com.ua/img/product/13/68f66eb6ec162_original.webp.pagespeed.ce.2-EaNodsuF.webp" alt="Saeco Iperautomatica" loading="lazy" width="300" height="400">
+                                    <img src="https://v12coffee.com.ua/img/product/13/68f66eb6ec162_original.webp.pagespeed.ce.2-EaNodsuF.webp"
+                                        alt="Saeco Iperautomatica" loading="lazy" width="300" height="400">
                                     <div class="badge badge--sale">Супер ціна</div>
                                 </div>
                                 <div class="product-card__info">
@@ -522,7 +1738,8 @@
                         <div class="swiper-slide catalog-item">
                             <article class="product-card" data-aos="fade-up" data-aos-delay="500">
                                 <div class="product-card__image">
-                                    <img src="https://v12coffee.com.ua/img/product/5/68a662d21cb6a.png.pagespeed.ce.uyqbEp9VAF.png" alt="JL300 Outdoor" loading="lazy" width="300" height="400">
+                                    <img src="https://v12coffee.com.ua/img/product/5/68a662d21cb6a.png.pagespeed.ce.uyqbEp9VAF.png"
+                                        alt="JL300 Outdoor" loading="lazy" width="300" height="400">
                                     <div class="badge badge--hot">Premium</div>
                                 </div>
                                 <div class="product-card__info">
@@ -548,7 +1765,8 @@
                         <div class="swiper-slide catalog-item">
                             <article class="product-card">
                                 <div class="product-card__image">
-                                    <img src="https://v12coffee.com.ua/img/product/6/68a6659050ea1.jpg.pagespeed.ce.9zghP1IdaB.jpg" alt="JL22 Indoor" loading="lazy" width="300" height="400">
+                                    <img src="https://v12coffee.com.ua/img/product/6/68a6659050ea1.jpg.pagespeed.ce.9zghP1IdaB.jpg"
+                                        alt="JL22 Indoor" loading="lazy" width="300" height="400">
                                     <div class="badge badge--sale">Акція</div>
                                 </div>
                                 <div class="product-card__info">
@@ -575,7 +1793,8 @@
                         <div class="swiper-slide catalog-item">
                             <article class="product-card">
                                 <div class="product-card__image">
-                                    <img src="https://v12coffee.com.ua/img/product/4/68c1685474f79_original.webp.pagespeed.ce.27DfrHpXpn.webp" alt="JL300 Indoor" loading="lazy" width="300" height="400">
+                                    <img src="https://v12coffee.com.ua/img/product/4/68c1685474f79_original.webp.pagespeed.ce.27DfrHpXpn.webp"
+                                        alt="JL300 Indoor" loading="lazy" width="300" height="400">
                                 </div>
                                 <div class="product-card__info">
                                     <h3 class="product-card__title">JL300 Холодні напої</h3>
@@ -600,7 +1819,8 @@
                         <div class="swiper-slide catalog-item">
                             <article class="product-card">
                                 <div class="product-card__image">
-                                    <img src="https://v12coffee.com.ua/img/product/1/68f6574b3300c_original.webp.pagespeed.ce.Z64NPmlCPp.webp" alt="Saeco Phedra" loading="lazy" width="300" height="400">
+                                    <img src="https://v12coffee.com.ua/img/product/1/68f6574b3300c_original.webp.pagespeed.ce.Z64NPmlCPp.webp"
+                                        alt="Saeco Phedra" loading="lazy" width="300" height="400">
                                     <div class="badge badge--sale">Б/В</div>
                                 </div>
                                 <div class="product-card__info">
@@ -627,7 +1847,8 @@
                         <div class="swiper-slide catalog-item">
                             <article class="product-card">
                                 <div class="product-card__image">
-                                    <img src="https://v12coffee.com.ua/img/product/15/x69469acfd1083_original.webp.pagespeed.ic.4kkocsd1gO.webp" alt="JL22 New Design" loading="lazy" width="300" height="400">
+                                    <img src="https://v12coffee.com.ua/img/product/15/x69469acfd1083_original.webp.pagespeed.ic.4kkocsd1gO.webp"
+                                        alt="JL22 New Design" loading="lazy" width="300" height="400">
                                 </div>
                                 <div class="product-card__info">
                                     <h3 class="product-card__title">Новий дизайн JL 22</h3>
@@ -652,7 +1873,8 @@
                         <div class="swiper-slide catalog-item">
                             <article class="product-card">
                                 <div class="product-card__image">
-                                    <img src="https://v12coffee.com.ua/img/product/7/691dc32fa07f8_original.png.pagespeed.ce.16e6jsB0cg.png" alt="JL22 Outdoor" loading="lazy" width="300" height="400">
+                                    <img src="https://v12coffee.com.ua/img/product/7/691dc32fa07f8_original.png.pagespeed.ce.16e6jsB0cg.png"
+                                        alt="JL22 Outdoor" loading="lazy" width="300" height="400">
                                 </div>
                                 <div class="product-card__info">
                                     <h3 class="product-card__title">Вулична JL22</h3>
@@ -677,7 +1899,8 @@
                         <div class="swiper-slide catalog-item">
                             <article class="product-card">
                                 <div class="product-card__image">
-                                    <img src="https://v12coffee.com.ua/img/product/8/68a7340da484c.jpg.pagespeed.ce.NSg0HGXCYa.jpg" alt="Nova Poshta" loading="lazy" width="300" height="400">
+                                    <img src="https://v12coffee.com.ua/img/product/8/68a7340da484c.jpg.pagespeed.ce.NSg0HGXCYa.jpg"
+                                        alt="Nova Poshta" loading="lazy" width="300" height="400">
                                 </div>
                                 <div class="product-card__info">
                                     <h3 class="product-card__title">Формат Нова Пошта</h3>
@@ -702,7 +1925,8 @@
                         <div class="swiper-slide catalog-item">
                             <article class="product-card">
                                 <div class="product-card__image">
-                                    <img src="https://v12coffee.com.ua/img/product/16/691dcc0a3d8b2_original.png.pagespeed.ce.odf6vqmZUv.png" alt="Saeco Outdoor" loading="lazy" width="300" height="400">
+                                    <img src="https://v12coffee.com.ua/img/product/16/691dcc0a3d8b2_original.png.pagespeed.ce.odf6vqmZUv.png"
+                                        alt="Saeco Outdoor" loading="lazy" width="300" height="400">
                                     <div class="badge badge--sale">Б/В</div>
                                 </div>
                                 <div class="product-card__info">
@@ -731,7 +1955,7 @@
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
-            </div> 
+            </div>
         </section>
 
         <!-- Steps Section (How we work) -->
@@ -829,13 +2053,15 @@
                     <div class="offer-box__content">
                         <div class="offer-box__badge">Слава Україні! 🇺🇦</div>
                         <h3 class="offer-box__title">Знижка для військових <span class="text-accent">-5%</span></h3>
-                        <p class="offer-box__text">Особливі умови для військовослужбовців та ветеранів на все обладнання V12. Дякуємо за ваш захист та відданість!</p>
+                        <p class="offer-box__text">Особливі умови для військовослужбовців та ветеранів на все обладнання
+                            V12. Дякуємо за ваш захист та відданість!</p>
                         <button class="btn btn--primary btn--glow" data-modal="consultation">Отримати знижку</button>
                     </div>
-                    
+
                     <div class="offer-box__image">
                         <!-- Placeholder image - Replace with your actual photo -->
-                        <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1000&auto=format&fit=crop" alt="Військові" loading="lazy" width="300" height="400">
+                        <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1000&auto=format&fit=crop"
+                            alt="Військові" loading="lazy" width="300" height="400">
                         <div class="offer-box__gradient-overlay"></div>
                     </div>
                 </div>
@@ -849,7 +2075,7 @@
                     <h2 class="section__title">Історії <span class="text-accent">успіху</span></h2>
                     <p class="section__subtitle">Реальні результати наших партнерів</p>
                 </div>
-                
+
                 <!-- Swiper Coverflow -->
                 <div class="swiper reviews-slider">
                     <div class="swiper-wrapper">
@@ -857,7 +2083,8 @@
                         <div class="swiper-slide">
                             <div class="review-card-3d">
                                 <div class="review-card-3d__image">
-                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop" alt="Максим" loading="lazy" width="300" height="400">
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop"
+                                        alt="Максим" loading="lazy" width="300" height="400">
                                     <div class="review-card-3d__overlay"></div>
                                 </div>
                                 <div class="review-card-3d__content">
@@ -871,7 +2098,8 @@
                                             <span class="review-stat__label">Прибуток</span>
                                         </div>
                                     </div>
-                                    <p class="review-quote">“Співпраця з компанією V12 нам подобається. Все чітко та прозоро.”</p>
+                                    <p class="review-quote">“Співпраця з компанією V12 нам подобається. Все чітко та
+                                        прозоро.”</p>
                                     <div class="review-author">
                                         <h3>Максим</h3>
                                         <span>Партнер з Харкова</span>
@@ -884,7 +2112,8 @@
                         <div class="swiper-slide">
                             <div class="review-card-3d">
                                 <div class="review-card-3d__image">
-                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1000&auto=format&fit=crop" alt="Сергій" loading="lazy" width="300" height="400">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1000&auto=format&fit=crop"
+                                        alt="Сергій" loading="lazy" width="300" height="400">
                                     <div class="review-card-3d__overlay"></div>
                                 </div>
                                 <div class="review-card-3d__content">
@@ -898,7 +2127,8 @@
                                             <span class="review-stat__label">Прибуток</span>
                                         </div>
                                     </div>
-                                    <p class="review-quote">“Сподобалось, що з першого дня вже можна заробляти. Бізнес під ключ.”</p>
+                                    <p class="review-quote">“Сподобалось, що з першого дня вже можна заробляти. Бізнес
+                                        під ключ.”</p>
                                     <div class="review-author">
                                         <h3>Сергій</h3>
                                         <span>Партнер з Києва</span>
@@ -911,7 +2141,8 @@
                         <div class="swiper-slide">
                             <div class="review-card-3d">
                                 <div class="review-card-3d__image">
-                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop" alt="Олена" loading="lazy" width="300" height="400">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
+                                        alt="Олена" loading="lazy" width="300" height="400">
                                     <div class="review-card-3d__overlay"></div>
                                 </div>
                                 <div class="review-card-3d__content">
@@ -925,7 +2156,8 @@
                                             <span class="review-stat__label">Прибуток</span>
                                         </div>
                                     </div>
-                                    <p class="review-quote">“Ідеальний варіант для пасивного доходу. Мінімум часу, максимум віддачі.”</p>
+                                    <p class="review-quote">“Ідеальний варіант для пасивного доходу. Мінімум часу,
+                                        максимум віддачі.”</p>
                                     <div class="review-author">
                                         <h3>Олена</h3>
                                         <span>Партнер з Одеси</span>
@@ -933,12 +2165,13 @@
                                 </div>
                             </div>
                         </div>
-                        
-                         <!-- Slide 4 -->
-                         <div class="swiper-slide">
+
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
                             <div class="review-card-3d">
                                 <div class="review-card-3d__image">
-                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1000&auto=format&fit=crop" alt="Андрій" loading="lazy" width="300" height="400">
+                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1000&auto=format&fit=crop"
+                                        alt="Андрій" loading="lazy" width="300" height="400">
                                     <div class="review-card-3d__overlay"></div>
                                 </div>
                                 <div class="review-card-3d__content">
@@ -952,7 +2185,8 @@
                                             <span class="review-stat__label">Прибуток</span>
                                         </div>
                                     </div>
-                                    <p class="review-quote">“Масштабувати цей бізнес дуже легко. Команда V12 завжди на зв'язку.”</p>
+                                    <p class="review-quote">“Масштабувати цей бізнес дуже легко. Команда V12 завжди на
+                                        зв'язку.”</p>
                                     <div class="review-author">
                                         <h3>Андрій</h3>
                                         <span>Партнер зі Львова</span>
@@ -962,7 +2196,7 @@
                         </div>
 
                     </div>
-                    
+
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
@@ -986,28 +2220,31 @@
                             <!-- Drinks Input -->
                             <div class="calc-group">
                                 <div class="calc-label-row">
-                                    <label>Обери кількість напоїв в день:</label>
+                                    <label for="calc-cups">Обери кількість напоїв в день:</label>
                                     <span id="calc-cups-val">25</span>
                                 </div>
-                                <input type="range" id="calc-cups" min="1" max="150" value="25" class="range-slider">
+                                <input type="range" id="calc-cups" min="1" max="150" value="25" class="range-slider"
+                                    aria-label="Обери кількість напоїв в день">
                             </div>
 
                             <!-- Cafes Input -->
                             <div class="calc-group">
                                 <div class="calc-label-row">
-                                    <label>Обери кількість кав’ярень:</label>
+                                    <label for="calc-cafes">Обери кількість кав’ярень:</label>
                                     <span id="calc-cafes-val">1</span>
                                 </div>
-                                <input type="range" id="calc-cafes" min="1" max="12" value="1" class="range-slider">
+                                <input type="range" id="calc-cafes" min="1" max="12" value="1" class="range-slider"
+                                    aria-label="Обери кількість кав’ярень">
                             </div>
 
                             <!-- Months Input -->
                             <div class="calc-group">
                                 <div class="calc-label-row">
-                                    <label>Обери кількість місяців:</label>
+                                    <label for="calc-months">Обери кількість місяців:</label>
                                     <span id="calc-months-val">12</span>
                                 </div>
-                                <input type="range" id="calc-months" min="1" max="12" value="12" class="range-slider">
+                                <input type="range" id="calc-months" min="1" max="12" value="12" class="range-slider"
+                                    aria-label="Обери кількість місяців">
                             </div>
 
                             <!-- Result -->
@@ -1028,10 +2265,12 @@
                             <p class="form-subtitle">Заповни форму та отримай детальний бізнес-план</p>
 
                             <div class="form__group">
-                                <input type="text" class="form__input" placeholder="Ваше ім’я" required>
+                                <input type="text" class="form__input" placeholder="Ваше ім’я" required
+                                    aria-label="Ваше ім’я">
                             </div>
                             <div class="form__group">
-                                <input type="tel" class="form__input" placeholder="Номер телефону" required>
+                                <input type="tel" class="form__input" placeholder="Номер телефону" required
+                                    aria-label="Номер телефону">
                             </div>
                             <button type="submit" class="btn btn--primary btn--full btn--glow">Отримати
                                 розрахунок</button>
@@ -1046,33 +2285,39 @@
             <div class="container">
                 <div class="map-box" data-aos="fade-up">
                     <div class="map-box__content">
-                        <h2 class="section__title map-box__title">Де можна знайти <br><span class="text-accent">наші кав’ярні?</span></h2>
-                        <p class="map-box__desc">Ми покриваємо всі регіони України. Від великих мегаполісів до затишних містечок — V12 завжди поруч.</p>
-                        
+                        <h2 class="section__title map-box__title">Де можна знайти <br><span class="text-accent">наші
+                                кав’ярні?</span></h2>
+                        <p class="map-box__desc">Ми покриваємо всі регіони України. Від великих мегаполісів до затишних
+                            містечок — V12 завжди поруч.</p>
+
                         <div class="map-stats">
                             <div class="map-stat-item">
-                                <div class="map-stat-value"><span class="counter" data-value="2300">0</span><span class="plus">+</span></div>
+                                <div class="map-stat-value"><span class="counter" data-value="2300">0</span><span
+                                        class="plus">+</span></div>
                                 <div class="map-stat-label">Точок продажу</div>
                             </div>
                             <div class="map-stat-item">
-                                <div class="map-stat-value"><span class="counter" data-value="90">0</span><span class="plus">+</span></div>
+                                <div class="map-stat-value"><span class="counter" data-value="90">0</span><span
+                                        class="plus">+</span></div>
                                 <div class="map-stat-label">Міст України</div>
                             </div>
                         </div>
-                        
-                        <button class="btn btn--primary btn--glow" data-modal="consultation">Відкрити свою точку</button>
+
+                        <button class="btn btn--primary btn--glow" data-modal="consultation">Відкрити свою
+                            точку</button>
                     </div>
 
                     <div class="map-box__visual">
-                        <img src="assets/images/map-ukraine.svg" alt="Карта України" class="map-svg" loading="lazy" width="880" height="590">
-                        
+                        <img src="assets/images/map-ukraine.svg" alt="Карта України" class="map-svg" loading="lazy"
+                            width="880" height="590">
+
                         <!-- Pulse Hotspots -->
                         <div class="hotspot" style="top: 25%; left: 48%;"></div> <!-- Kyiv -->
                         <div class="hotspot" style="top: 28%; left: 15%;"></div> <!-- Lviv -->
                         <div class="hotspot" style="top: 65%; left: 45%;"></div> <!-- Odesa -->
                         <div class="hotspot" style="top: 35%; left: 75%;"></div> <!-- Kharkiv -->
                         <div class="hotspot" style="top: 45%; left: 65%;"></div> <!-- Dnipro -->
-                        
+
                         <div class="map-gradient-overlay"></div>
                     </div>
                 </div>
@@ -1097,13 +2342,18 @@
                         </div>
                         <div class="faq-body">
                             <div class="faq-content">
-                                <p>По всій Україні – ми найбільша мережа, перевірена якість, нам довіряють, ми цінуємо нашу репутацію, тому розвиваємо відділ супроводу, щоб наші партнери вчасно отримували консультацію та допомогу.</p>
-                                <p>Шукаємо локації по всій Україні, в тому числі і по державним тендерам. Маємо власну стратегію гри тендерів (понад 90% виграємо).</p>
-                                <p>Гарантуємо повернення кав’ярні впродовж перших 6 міс (60% від вартості) з будь-яких причин.</p>
+                                <p>По всій Україні – ми найбільша мережа, перевірена якість, нам довіряють, ми цінуємо
+                                    нашу репутацію, тому розвиваємо відділ супроводу, щоб наші партнери вчасно
+                                    отримували консультацію та допомогу.</p>
+                                <p>Шукаємо локації по всій Україні, в тому числі і по державним тендерам. Маємо власну
+                                    стратегію гри тендерів (понад 90% виграємо).</p>
+                                <p>Гарантуємо повернення кав’ярні впродовж перших 6 міс (60% від вартості) з будь-яких
+                                    причин.</p>
                                 <ul>
                                     <li>Великий досвід в своїй галузі – продаж, просування, супровід.</li>
                                     <li>Власне постачання за найнижчою ціною на ринку.</li>
-                                    <li>Розвинений відділ супроводу: спеціалісти з пошуку локацій, маркетингу, юристи та бухгалтери.</li>
+                                    <li>Розвинений відділ супроводу: спеціалісти з пошуку локацій, маркетингу, юристи та
+                                        бухгалтери.</li>
                                 </ul>
                             </div>
                         </div>
@@ -1117,13 +2367,16 @@
                         </div>
                         <div class="faq-body">
                             <div class="faq-content">
-                                <p>Ми використовуємо кавомашини бренду <span class="text-accent">Saeco Phedra Evo Cappuccino</span> італійського виробника. Власником компанії Saeco є Philips, тому сервіс даних кавомашин є практично у кожному місті.</p>
+                                <p>Ми використовуємо кавомашини бренду <span class="text-accent">Saeco Phedra Evo
+                                        Cappuccino</span> італійського виробника. Власником компанії Saeco є Philips,
+                                    тому сервіс даних кавомашин є практично у кожному місті.</p>
                                 <ul>
                                     <li>Потужність: 1750 Вт</li>
                                     <li>Продуктивність: 70-100 напоїв з одного завантаження</li>
                                     <li>Гарантія: 12 місяців</li>
                                 </ul>
-                                <p>Післягарантійне обслуговування теж забезпечуємо ми. Якщо ремонт довготривалий, можливе надання підмінної кавомашини, щоб уникнути простою бізнесу.</p>
+                                <p>Післягарантійне обслуговування теж забезпечуємо ми. Якщо ремонт довготривалий,
+                                    можливе надання підмінної кавомашини, щоб уникнути простою бізнесу.</p>
                             </div>
                         </div>
                     </div>
@@ -1137,7 +2390,9 @@
                         <div class="faq-body">
                             <div class="faq-content">
                                 <p>Якщо у вас немає локації, ми можемо запропонувати послугу пошуку.</p>
-                                <p>Ми шукаємо місця, ведемо переговори, узгоджуємо вартість оренди та надаємо типовий договір. Ви розглядаєте запропоновану локацію, і тільки якщо вона вам підходить — підписуєте договір.</p>
+                                <p>Ми шукаємо місця, ведемо переговори, узгоджуємо вартість оренди та надаємо типовий
+                                    договір. Ви розглядаєте запропоновану локацію, і тільки якщо вона вам підходить —
+                                    підписуєте договір.</p>
                                 <p>Вартість послуги: 550$ (внутрішній формат) або 750$ (вуличний формат).</p>
                             </div>
                         </div>
@@ -1176,13 +2431,15 @@
                         </div>
                         <div class="faq-body">
                             <div class="faq-content">
-                                <p>Ми пропонуємо прибуткову кав’ярню самообслуговування, яка повністю переходить у вашу власність.</p>
+                                <p>Ми пропонуємо прибуткову кав’ярню самообслуговування, яка повністю переходить у вашу
+                                    власність.</p>
                                 <p>На даний момент <strong>роялті відсутнє</strong>.</p>
-                                <p>Для обслуговування потрібно лише 10-15 хв на день (додати воду/інгредієнти, прибрати). Дохід з однієї точки — від 10 000 грн/міс.</p>
+                                <p>Для обслуговування потрібно лише 10-15 хв на день (додати воду/інгредієнти,
+                                    прибрати). Дохід з однієї точки — від 10 000 грн/міс.</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Item 6 -->
                     <div class="faq-item">
                         <div class="faq-header">
@@ -1191,7 +2448,8 @@
                         </div>
                         <div class="faq-body">
                             <div class="faq-content">
-                                <p>Так! Завдяки партнерству з Monobank ти можеш оформити покупку частинами до 12 місяців.</p>
+                                <p>Так! Завдяки партнерству з Monobank ти можеш оформити покупку частинами до 12
+                                    місяців.</p>
                                 <p>Також доступне безвідсоткове розтермінування на 4 місяці.</p>
                             </div>
                         </div>
@@ -1205,7 +2463,8 @@
                         </div>
                         <div class="faq-body">
                             <div class="faq-content">
-                                <p>Так, ми розглядаємо варіанти обміну на авто чи нерухомість. Процес прозорий та офіційний: оцінка майна, документи, угода.</p>
+                                <p>Так, ми розглядаємо варіанти обміну на авто чи нерухомість. Процес прозорий та
+                                    офіційний: оцінка майна, документи, угода.</p>
                             </div>
                         </div>
                     </div>
@@ -1218,7 +2477,8 @@
                         </div>
                         <div class="faq-body">
                             <div class="faq-content">
-                                <p>Так, ми експортуємо до Польщі, Німеччини та інших країн Європи. Допомагаємо з логістикою та документами.</p>
+                                <p>Так, ми експортуємо до Польщі, Німеччини та інших країн Європи. Допомагаємо з
+                                    логістикою та документами.</p>
                             </div>
                         </div>
                     </div>
@@ -1232,7 +2492,8 @@
                         <div class="faq-body">
                             <div class="faq-content">
                                 <p>Електроспоживання: 3.5 - 7 кВт (залежно від комплектації).</p>
-                                <p>Водопровід: <strong>Не потрібен</strong>. Всі моделі працюють автономно від бутлів з водою.</p>
+                                <p>Водопровід: <strong>Не потрібен</strong>. Всі моделі працюють автономно від бутлів з
+                                    водою.</p>
                             </div>
                         </div>
                     </div>
@@ -1245,7 +2506,8 @@
                         </div>
                         <div class="faq-body">
                             <div class="faq-content">
-                                <p>У середньому від <strong>15 000 до 90 000 грн</strong> чистого прибутку на місяць. Все залежить від локації та трафіку людей.</p>
+                                <p>У середньому від <strong>15 000 до 90 000 грн</strong> чистого прибутку на місяць.
+                                    Все залежить від локації та трафіку людей.</p>
                             </div>
                         </div>
                     </div>
@@ -1259,7 +2521,8 @@
                         <div class="faq-body">
                             <div class="faq-content">
                                 <p>Так! У нас є спеціаліст, який допоможе отримати державний грант.</p>
-                                <p>Умова: застава $1000, решту покриває держава. Заставу потім можна використати як частину оплати або повернути.</p>
+                                <p>Умова: застава $1000, решту покриває держава. Заставу потім можна використати як
+                                    частину оплати або повернути.</p>
                             </div>
                         </div>
                     </div>
@@ -1278,9 +2541,10 @@
                         <div class="cta-badge">🚀 Розпочніть вже сьогодні</div>
                         <h2 class="cta-title">Готові створити <br><span class="text-accent">власний бізнес?</span></h2>
                         <p class="cta-desc">
-                            Залиште заявку зараз і отримайте повний бізнес-план, аналіз локації та консультацію експерта <strong>безкоштовно</strong>.
+                            Залиште заявку зараз і отримайте повний бізнес-план, аналіз локації та консультацію експерта
+                            <strong>безкоштовно</strong>.
                         </p>
-                        
+
                         <div class="cta-features">
                             <div class="cta-feat">
                                 <span class="cta-feat-icon">⚡</span>
@@ -1308,12 +2572,14 @@
                         <form class="premium-form">
                             <div class="input-group">
                                 <div class="input-icon">👤</div>
-                                <input type="text" class="premium-input" placeholder="Як вас звати?" required>
+                                <input type="text" class="premium-input" placeholder="Як вас звати?" required
+                                    aria-label="Як вас звати?">
                             </div>
-                            
+
                             <div class="input-group">
                                 <div class="input-icon">📞</div>
-                                <input type="tel" class="premium-input" placeholder="+38 (0__) ___-__-__" required>
+                                <input type="tel" class="premium-input" placeholder="+38 (0__) ___-__-__" required
+                                    aria-label="Номер телефону">
                             </div>
 
                             <div class="input-group">
@@ -1332,10 +2598,11 @@
                                 <span>Отримати бізнес-план</span>
                                 <div class="btn-shine"></div>
                             </button>
-                            
+
                             <div class="form-privacy">
                                 <input type="checkbox" id="privacy-check" checked>
-                                <label for="privacy-check">Я погоджуюсь з <a href="#">політикою конфіденційності</a></label>
+                                <label for="privacy-check">Я погоджуюсь з <a href="#">політикою
+                                        конфіденційності</a></label>
                             </div>
                         </form>
                     </div>
@@ -1393,7 +2660,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" defer></script>
 
     <script src="assets/js/main.js" defer></script>
-    
+
     <!-- Cursor Blur Glow -->
     <div id="cursor-blur" class="cursor-blur"></div>
 </body>
