@@ -21,7 +21,7 @@
     <meta property="og:image" content="assets/images/og-image.jpg">
 
     <!-- Preload Critical Resources -->
-    <link rel="preload" as="image" href="assets/images/hero_machine_final.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/images/hero_machine_650.webp" imagesrcset="assets/images/hero_machine_320.webp 320w, assets/images/hero_machine_480.webp 480w, assets/images/hero_machine_650.webp 650w, assets/images/hero_machine_final.webp 800w" imagesizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1200px) 650px, 800px" fetchpriority="high">
 
     <!-- PDF -->
     <link rel="preload" href="assets/fonts/nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgFE_.woff2" as="font" type="font/woff2"
@@ -211,8 +211,14 @@
                 <div class="hero__image-wrapper" data-aos="zoom-in" data-aos-duration="1000">
                     <!-- Placeholder for Hero Image (coffee machine) -->
                     <div class="hero__visual-circle"></div>
-                    <img src="assets/images/hero_machine_final.webp" alt="Сучасна кав'ярня самообслуговування"
-                        class="hero__img" width="800" height="800" fetchpriority="high">
+                    <img src="assets/images/hero_machine_650.webp" 
+                        srcset="assets/images/hero_machine_320.webp 320w,
+                                assets/images/hero_machine_480.webp 480w,
+                                assets/images/hero_machine_650.webp 650w,
+                                assets/images/hero_machine_final.webp 800w"
+                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1200px) 650px, 800px"
+                        alt="Сучасна кав'ярня самообслуговування"
+                        class="hero__img" width="650" height="650" fetchpriority="high">
                 </div>
             </div>
         </section>
